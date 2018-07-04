@@ -1,0 +1,283 @@
+中国数学建模-编程交流-动态规划算法
+        wh-ee 重登录  隐身  用户控制面板  搜索  风格  论坛状态  论坛展区  社区服务  社区休闲  网站首页  退出 
+
+      >> VC++,C,Perl,Asp...编程学习,算法介绍.  我的收件箱 (0) 
+       中国数学建模 → 学术区 → 编程交流 → 动态规划算法 
+
+             您是本帖的第 642 个阅读者       
+             * 贴子主题：动态规划算法           
+
+              b  
+        
+        
+        等级：职业侠客 
+        文章：470
+        积分：956
+        门派：黑客帝国 
+        注册：2003-8-28
+                        第 21 楼 
+
+
+
+               
+
+              动态规划与网络流——动态规划是易设计易实现的算法
+              由于图的关系复杂而无序，一般难以呈现阶段特征（除了特殊的图如多段图--参见例一），因此动态规划在图论中的应用不多。但有一类图，它的点却是有序的，这就是无环有向图。
+              在有向无环图中，我们可以对点进行拓扑排序，使其体现出有序的特征，从而据此划分阶段。在有向无还图中求最短路径的算法，已经体现出了简单的动态规划思想。请看下面的例子。
+
+              [例16] 单源最短路径问题
+              已知从A到J的路线及费用如上图，求从A到J的最小费用路线。
+              问题的分析和解答：
+              本问题没有明显的阶段划分，各点间没有一定的先后次序（请注意与例一不同），不能按照最少步数来决定顺序，如从A到D走捷径需4，但A-C-D只需3，更优。看来图中出现回路，不能实施动态规划。其实不然。细想一下，从A到J的最优策略，它每一部分也是最优的（可以用反证法来证明），换言之，本题也具有最优化性质，只是阶段不明显而已。
+              对于这类问题，我们可以换个角度分析，构造算法。比较一下前面所讲的动态规划法，都是以某个状态为终点，寻找到达次点的路径，然后比较优劣，确定此状态最优值。可是，本题阶段不明显，各状态之间的道路会出现嵌套，故此法不能使用。变一下角度，每次都以某个状态为起点，遍历由它引申出去的路径，等所有已知状态都扩展完了，再来比较所有新状态，把值最小的那个状态确定下来，其它的不动。如上图，先从A出发，找到3个结点B，D，C，费用为F（B）=3，F（D）=4，F（C）=2。因为F（B），F（D）都大于F（C），那么可以确定：不可能再有路线从B或D出发到C，比A-C更优。这样F（C）的最优值便确定了。可是，有没有路线从C出发到B或D，比A-B或A-D更优呢？还不清楚。继续下去，因为A扩展完了，只有从C开始，得到A-C-D=3，A-C-F=3，于是F（D）的值被刷新了，等于3。现在，有F（B）=F（D）=F（F）=3，于是，三点的最优值都确定下来了。然后以分别以三个点为起点，继续找。以次类推，直到J点的最优值确定为止。
+              细心观察，其实本题的隐含阶段就是以各结点的最优值的大小来划分的，上述过程就是按最优值从小到大前向动态规划。人们习惯上把此题归入到图论范畴中，并将上述方法称为标号法。这个算法就是图论中著名的Dijkstra单源最短路径算法。
+              事实上，动态规划在图论中还有更多的应用，请看下例：
+              [例17]  N个人的街道问题
+              在街道问题（参见例7）中，若有N个人要从左下角走向右上角，要求他们走过的边的总长度最大。当然，这里每个人也只能向右或向上走。下面是一个样例，左图是从出发地到目的地的三条路径，右图是他们所走过的边，这些边的总长度为5 
+              + 4 + 3 + 6 + 3 + 3 + 5 + 8 + 8 + 7 + 4 + 5 + 9 + 5 + 3 = 
+              78（不一定是最大）。
+
+              这个题目是对街道问题的又一次扩展。仿照街道问题的解题方法，我们仍然可以用动态规划来解决本题。不过这一次是N个人同时走，状态变量也就需要用N维向量来表示。相应的，决策变量也要变成N维向量：
+
+              状态转移方程不需要做什么改动：
+
+              在写规划方程时，需要注意在第k阶段，N条路径所走过的边的总长度的计算，在这里用来表示了：
+
+              边界条件为
+
+              可见将原来的动态规划算法移植到这个问题上来，在理论上还是完全可行的。但是，现在的这个动态规划算法的时空复杂度已经是关于N的指数函数，只要N稍微大一点，这个算法就不可能实现了。
+              下面我们换一个思路，将N条路径看成是网络中一个流量为N的流，这样求解的目标就是使这个流的费用最大。但是本题又不同于一般的费用流问题，在每一条边e上的流费用并不是流量和边权的乘积，而是用下式计算：
+
+              为了使经典的费用流算法适用于本题，需要将模型稍微转化一下：
+
+              如图，将每条边拆成两条,拆开后一条边上有权w0，但是容量限制为1；另一条边没有容量限制，但是流过这条边就不计费用。这样我们就把问题转化成了一个标准的最大费用固定流问题。
+              这个算法可以套用经典的最小费用最大流算法，在此就不细说了。
+              IOI97的“障碍物探测器”比这一题要复杂一些，但是基本思想是相似的。类似的题目还有99年冬令营的“迷宫改造”。从这些题目中都可以看到动态规划和网络流的联系。
+              推广到一般情况，任何有向无环图中的费用流问题在理论上说，都可以用动态规划来解决。对于流量为N（如果流量不固定，这个N需要事先求出来）的费用流问题，用N维的向量xk=(xk,1,xk,2,…,xk,N)来描述状态，其中xk,i∈V 
+              , 1≤i≤N 。相应的，决策也用N维的向量uk=(uk,1,uk,2,…,uk,N)来表示，其中uk,i∈E(xk,i) , 
+              1≤i≤N ，E(v)表示指向v的弧集。则状态转移方程可以这样表示：
+
+              规划方程为
+
+              边界条件为
+
+              在大多数情况下，动态规划的实现比网络流要简单的多。但是，由于N维动态规划算法是指数级算法，因而在实现中的局限性很大，仅可用于一些N非常小的题目适用。
+              <!-- #EndEditable -->
+
+              ----------------------------------------------
+
+              plot(100+t+15*cos(3.05*t),t=0..200,coords=polar,axes=none,scaling=constrained); 
+
+
+       2004-5-28 19:51:27       
+
+              b  
+        
+        
+        等级：职业侠客 
+        文章：470
+        积分：956
+        门派：黑客帝国 
+        注册：2003-8-28
+                        第 22 楼 
+
+
+
+               
+
+              动态规划的数学理论模型
+              在动态规划算法发展的初期，Bellman从纯粹的逻辑出发给出了最优性原理 --Principle of Optimality:
+                "An optimal policy has the property that whatever the initial 
+                state and initial decision are, then remaining decisions must 
+                constitute an optimal policy with regard to the state resulting 
+                from first decision." 
+              他给出这个原理作为动态规划适用的条件，后来Morin在1982年证明了这只是一个充分条件而非必要条件。
+              动态规划开始只是应用于多阶段决策性问题，后来渐渐被发展为解决离散最优化问题的有效手段，进一步应用于一些连续性问题上。然而，动态规划更像是一种思想而非算法，它没有固定的数学模型，没有固定的实现方法，其正确性也缺乏严格的理论证明。因此，一直以来动态规划的数学理论模型是一个研究的热点。
+              目前比较流行的主要有两种理论模型：关系计算模型(relational calculus 
+              model)和估价网络模型(valuation network model)。
+              关于这两种流行理论，感兴趣的朋友可以参看以下论文：
+                关系计算模型:Dynamic Programming: a different perspective , Sharon 
+                Curtis (下载压缩的PDF文档, English , 137KB) 
+                估价网络模型:AXIOMS FOR DYNAMIC PROGRAMMING , Prakash P. 
+                Shenoy(下载压缩的PDF文档, English , 81KB) 
+              <!-- #EndEditable -->
+
+              ----------------------------------------------
+
+              plot(100+t+15*cos(3.05*t),t=0..200,coords=polar,axes=none,scaling=constrained); 
+
+
+       2004-5-28 19:51:50       
+
+              b  
+        
+        
+        等级：职业侠客 
+        文章：470
+        积分：956
+        门派：黑客帝国 
+        注册：2003-8-28
+                        第 23 楼 
+
+
+
+               
+
+              其他资料
+              关于动态规划的应用，请参阅动态规划问题集
+              关于递归法，请参阅递归技术
+              关于分治法，请参阅分治法
+              关于动态规划的更多技巧和知识，请参阅以下资料：
+                以下是来自IOI国家集训队的论文： 
+                  动态规划 ，方奇 (Zipped MS Word document) 
+                  把握本质，灵活运用——动态规划的深入探讨 ，来煜坤 (Zipped MS Word document) 
+                  动态规划的深入讨论 ，李刚 (Zipped MS Word document) 
+                  动态规划的特点及其应用 ，张辰 (Zipped MS Word document) 推荐 
+                AXIOMS FOR DYNAMIC PROGRAMMING , Prakash P. Shenoy ,1996 (Zipped 
+                .pdf document) 推荐 
+                Dynamic Programming: a different perspective , Sharon Curtis     
+                , (Zipped .pdf document) 推荐 
+                How to Design Dynamic Programming Algorithms Sans Recursion , 
+                Kirk Pruhs (Zipped .ps document) 推荐 
+                Dynamic Programming via Static Incrementalization , Yanhong A. 
+                Liu, Scott D. Stoller (Zipped .ps document) 推荐 
+                Dynamic Programming in a Generalized Decision Mode , Ulrich 
+                Huckenbeck, December, 1993 (Zipped .ps document) 推荐 
+                Between Dynamic Programming and Greedy: Data Compression , 
+                Richard S. Bird , Oege de Moor, September 14 ,1995 (Zipped .pdf 
+                document) 
+                Using Local Trajectory Optimizers To Speed Up Global 
+                Optimization In Dynamic Programming , Christopher G. Atkeson , 
+                July 28,1995 (Zipped .ps document) 
+                A Fast Bit-Vector Algorithm for Approximate String Matching 
+                Based on Dynamic Programming , Gene Myers,March 27, 1998 (Zipped 
+                .ps document) 
+                Soft Dynamic Programming Algorithms: Convergence Proofs , 
+                Satinder P. Singh ,1993 (Zipped .ps document) 
+                Speeding up Dynamic Programming without Omitting any Optimal 
+                Solution and some Applications in Molecular Biology, Norbert 
+                Blum ,January 18, 2000 (Zipped .ps document) 
+              <!-- #EndEditable -->
+              以下内容为程序代码:
+              <SCRIPT src="../../../lib/footer.js">
+
+              <script>
+
+
+              ----------------------------------------------
+
+              plot(100+t+15*cos(3.05*t),t=0..200,coords=polar,axes=none,scaling=constrained); 
+
+
+       2004-5-28 19:52:16       
+
+              zxb1373  
+        
+        
+        头衔：透河井后 
+        等级：新手上路 
+        文章：11
+        积分：271
+        门派：黑客帝国 
+        注册：2004-7-28
+                        第 24 楼 
+
+
+
+               
+              好东西
+
+              ----------------------------------------------
+              诚实做人，认真做事 
+
+       2004-7-28 20:39:07       
+
+              zhangchi123  
+        
+        
+        头衔：Spiderman 
+        等级：新手上路 
+        文章：57
+        积分：463
+        注册：2004-7-22
+                        第 25 楼 
+
+
+
+               
+
+              前辈：
+              我为啥看不到你的方程？
+
+
+              ----------------------------------------------
+              力量越大，责任越大。
+
+              一切问题都是数学问题！ 
+
+       2004-7-28 21:14:11       
+
+              heihei  
+        
+        
+        等级：新手上路 
+        文章：34
+        积分：420
+        门派：☆nudter☆ 
+        注册：2004-6-23
+                        第 26 楼 
+
+
+
+               
+              对对对，这到是好东东，但是看不到方程，就不好了 
+
+       2004-7-31 23:49:12       
+
+              wujin304  
+        
+        
+        等级：新手上路 
+        文章：11
+        积分：336
+        门派：黑客帝国 
+        注册：2004-7-14
+                         第 27 楼 
+
+
+
+               
+              好呀教教我好吗？ 
+
+       2004-8-2 16:06:53       
+
+      本主题贴数 27   分页：9 1 2 3 :  跳转论坛至...╋数学建模  ├数模竞赛  ├新手入门  ├数学工具  ├资源与检索╋学术区  
+        ├数学思想  ├编程交流  ├学术杂谈  ├English Fans╋休闲专区  ├灌水搞笑专区  ├神秘园╋本站站务  ├站务讨论  
+        ├数模管理区  ├回收站
+
+
+       *快速回复：动态规划算法
+           发贴表情
+                  
+                  
+                  
+                  
+                  
+                  
+
+               段落格式 普通格式标题 1标题 2标题 3标题 4标题 5标题 6标题 7已编排格式地址  
+              字体宋体黑体楷体仿宋隶书幼圆新宋体细明体ArialArial BlackCourierVerdanaWide 
+              LatinWingdings  字号1234567              
+
+
+                      第 1 页,共 7 页， 49 个
+
+       显示签名     内容限制：字节. 
+
+
+      管理选项： 专题管理 | 修复 | 锁定 | 解锁 | 提升 | 跟贴管理 | 删除 | 移动 | 设置固顶 | 奖励 | 惩罚 | 发布公告 
+
+            Copyright &copy;2002 - 2004 Shumo.Com
+            执行时间：343.75000毫秒。查询数据库7次。
+            当前模板样式：[默认模板] 
+
