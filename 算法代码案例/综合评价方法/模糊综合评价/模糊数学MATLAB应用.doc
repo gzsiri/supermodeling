@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>提示信息校苑数模</title>
+<meta name="keywords" content="" />
+<meta name="description" content=",校苑数模" />
+<meta name="MSSmartTagsPreventParsing" content="True" />
+<meta http-equiv="MSThemeCompatible" content="Yes" />
+<meta http-equiv="X-UA-Compatible" content=IE="EmulateIE7">
+<base href="http://www.mathor.com/" /><link rel="stylesheet" type="text/css" href="data/cache/style_14_common.css?p6L" /><link rel="stylesheet" type="text/css" href="data/cache/style_14_forum_misc.css?p6L" /><script type="text/javascript">var STYLEID = '14', STATICURL = 'static/', IMGDIR = './template/ahdxbl_syw/images/common', VERHASH = 'p6L', charset = 'gbk', discuz_uid = '124383', cookiepre = 'Ipr3_c0a5_', cookiedomain = 'mathor.com', cookiepath = '/', showusercard = '1', attackevasive = '0', disallowfloat = '', creditnotice = '1|徽章|,2|军费|,3|校苑币|', defaultstyle = '', REPORTURL = 'aHR0cDovL3d3dy5tYXRob3IuY29tL2ZvcnVtLnBocD9tb2Q9bWlzYyZhY3Rpb249YXR0YWNoY3JlZGl0JmFpZD02OTg1JmZvcm1oYXNoPTljYTRjYmRj', SITEURL = 'http://www.mathor.com/', JSPATH = 'static/js/';</script>
+<script src="./template/ahdxbl_syw/images/head/jquery1.8.js" type="text/javascript"></script>
+    <script src="static/js/common.js?p6L" type="text/javascript"></script>
+    <script src="http://l.tbcdn.cn/apps/top/x/sdk.js?appkey=21484607" type="text/javascript"></script>
+<meta name="application-name" content="校苑数模" />
+<meta name="msapplication-tooltip" content="校苑数模" />
+<meta name="msapplication-task" content="name=门户;action-uri=http://www.mathor.com/portal.php;icon-uri=http://www.mathor.com/./template/ahdxbl_syw/images/common/portal.ico" /><meta name="msapplication-task" content="name=广场;action-uri=http://www.mathor.com/forum.php;icon-uri=http://www.mathor.com/./template/ahdxbl_syw/images/common/bbs.ico" />
+<meta name="msapplication-task" content="name=群组;action-uri=http://www.mathor.com/group.php;icon-uri=http://www.mathor.com/./template/ahdxbl_syw/images/common/group.ico" /><meta name="msapplication-task" content="name=家园;action-uri=http://www.mathor.com/home.php;icon-uri=http://www.mathor.com/./template/ahdxbl_syw/images/common/home.ico" /><script src="static/js/forum.js?p6L" type="text/javascript"></script>
+</head>
+<body id="nv_forum" class="pg_misc" onkeydown="if(event.keyCode==27) return false;">
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+<div class="top_navbox cl">
+<script>var liup	 = 0;</script>
+<div class="top_nav_bg cl"></div>
+<div id="top_nav" class="cl">			
+<div class="wp">
+<div class="z">
+<div class="logo"><a target="_self" href="/"><img border="0" alt="校苑数模社区" src="./template/ahdxbl_syw/images/top_logo.png"></a></div>
+    
+<div class="nav_main">
+                <ul>
+                <li><a target="_self" href="/">首页</a></li>
+                <li><a class="new_showmenu" onMouseOver="showMenu(this.id)" href="forum.php">论坛</a>
+                       <ul class="new_pop" style="display: none;">         
+                         <li><a href="/thread-5363-1-1.html" target="_blank">发帖教程</a></li>
+                         <li><a href="/plugin.php?id=dpw_activity:activity" target="_blank">活动专题</a></li>
+                       </ul>
+</li>
+<li><a target="_blank" href="plugin.php?id=dsu_paulsign:sign">签到</a></li>
+<li><a target="_blank" href="plugin.php?id=zywx:propagate">手机版</a></li>
+                </ul>
+</div>		
+
+                <div class="bbs_navsearch">
+                <form target="_blank" action="search.php?searchsubmit=yes&amp;mod=forum" autocomplete="off" name="soso_hefei_cc_search" method="post">
+                <input type="text" style="width:160px" class="nav_searchone" onBlur="if (value ==&quot;&quot;){value=&quot;输入搜索内容&quot;}" value="输入搜索内容" onFocus="this.value=''" name="srchtxt">             
+                <input type="submit" value="" class="nav_searcht" name="submit">
+                </form>
+                </div>
+</div><!--左侧结束 -->
+<div class="y" style="">	
+<div class="register">
+		            
+<li><strong class="vwmy"><a href="space-uid-124383.html" target="_blank" title="访问我的空间">bo707977656</a></strong></li>				
+<li><a href="home.php?mod=spacecp&amp;ac=credit&amp;showcredit=1" id="extcreditmenu" onMouseOver="delayShow(this, showCreditmenu);" class="showmenu" >积分: 296</a></li>
+<li><a href="home.php?mod=space&amp;do=notice" id="myprompt">提醒</a></li>
+<li><a class="new_showmenu" href="">设置</a>
+         <ul class="new_pop" style="display: none;">
+                            <li><a href="home.php?mod=spacecp&amp;ac=profile">账号资料</a></li>
+                            <li><a href="home.php?mod=spacecp&amp;ac=plugin&amp;id=qqconnect:spacecp">帐号绑定</a></li>
+                            <li><a href="home.php?mod=spacecp&amp;ac=profile&amp;op=password">修改密码</a></li>
+                            <li><a href="forum.php?mod=guide&amp;view=my">我的帖子</a></li>
+                            <li><a href="home.php?mod=space&amp;do=favorite&amp;view=me">我的收藏</a></li>
+                            <li><a href="home.php?mod=medal">荣誉勋章</a></li>
+         </ul>
+</li>
+<li><a href="member.php?mod=logging&amp;action=logout&amp;formhash=9ca4cbdc">退出</a></li>
+
+
+</div>
+
+</div><!--右侧结束 -->
+
+</div><!--导航wp中间 -->
+</div>
+</div>
+ <script src="./template/ahdxbl_syw/images/head/index.js" type="text/javascript"></script>
+
+<div id="qmenu_menu" class="p_pop " style="display: none;">
+                    
+<ul><li><a href="forum.php?mod=guide&view=my" style="background-image:url(http://www.mathor.com/static/image/feed/thread_b.png) !important">帖子</a></li>
+<li><a href="home.php?mod=space&do=friend" style="background-image:url(http://www.mathor.com/static/image/feed/friend_b.png) !important">好友</a></li>
+<li><a href="home.php?mod=magic" style="background-image:url(http://www.mathor.com/static/image/feed/magic_b.png) !important">道具</a></li>
+<li><a href="home.php?mod=medal" style="background-image:url(http://www.mathor.com/static/image/feed/medal_b.png) !important">勋章</a></li>
+<li><a href="home.php?mod=space&do=favorite&view=me" style="background-image:url(http://www.mathor.com/static/image/feed/favorite_b.png) !important">收藏</a></li>
+<li><a href="home.php?mod=task" style="background-image:url(http://www.mathor.com/static/image/feed/task_b.png) !important">任务</a></li>
+</ul>
+</div>
+<div id="hd">
+<div class="wp">
+<div class="hdc cl">
+                <h2><a href="./" title="校苑数模"><img src="./template/ahdxbl_syw/images/logo.png" alt="校苑数模" border="0" /></a></h2>
+
+
+<div class="logo_ico"><!--导航图标-->
+    <ul>
+      <li>
+        <a href="/show.php" target=_blank><img onMouseOver="this.src='./template/ahdxbl_syw/images/head/t01.png'" 
+onmouseout="this.src='./template/ahdxbl_syw/images/head/t001.png'" src="./template/ahdxbl_syw/images/head/t001.png"></a>
+      </li>
+  <li>
+        <a href="/forum.php" target=_blank><img onMouseOver="this.src='./template/ahdxbl_syw/images/head/t02.png'" 
+onmouseout="this.src='./template/ahdxbl_syw/images/head/t002.png'" src="./template/ahdxbl_syw/images/head/t002.png"></a>
+      </li>
+  <li>
+        <a href="/book.html" target=_blank><img onMouseOver="this.src='./template/ahdxbl_syw/images/head/t03.png'" 
+onmouseout="this.src='./template/ahdxbl_syw/images/head/t003.png'" src="./template/ahdxbl_syw/images/head/t003.png"></a>
+      </li>
+  <li>
+        <a href="/plugin.php?id=zywx:propagate" target=_blank><img onMouseOver="this.src='./template/ahdxbl_syw/images/head/t04.png'" 
+onmouseout="this.src='./template/ahdxbl_syw/images/head/t004.png'" src="./template/ahdxbl_syw/images/head/t004.png"></a>
+      </li>
+        <!--li>
+        <a href="/tuan.php" target=_blank><img onMouseOver="this.src='./template/ahdxbl_syw/images/head/t05.png'" 
+onmouseout="this.src='./template/ahdxbl_syw/images/head/t005.png'" src="./template/ahdxbl_syw/images/head/t005.png"></a>
+      </li-->
+    </ul>
+    <div class="clearb"></div>
+  </div>
+  
+  <!--搜索-->
+<script src="./template/ahdxbl_syw/images/head/dicengComm_pack_v1.0.1.js" type="text/javascript" type=text/javascript></script>	
+<script src="./template/ahdxbl_syw/images/head/menu.js" type="text/javascript" type=text/javascript></script>			
+  <!--搜索-->
+  <div class="searchsy">
+    <form action="search.php?searchsubmit=yes" method="post" target="_blank">
+      <div  class="s_title" id=right4_menu> <a onClick="check_form(2)" 	id='right4_menu_2' value="forum">论坛</a> | <a onClick="check_form(1)" 	id='right4_menu_1' class="on" value="portal">新闻</a>| <a onClick="check_form(3)" 	id='right4_menu_3' value="user">用户</a>
+          <div class="clearb"></div>
+      </div>
+      <dl>
+        <dt> <span><img src="./template/ahdxbl_syw/images/head/search_b2.gif" border="0" /></span>
+<INPUT id="search_select" type=hidden value="portal" name="mod"> 
+            <input type="hidden" name="formhash" value="9ca4cbdc" />
+<input type="hidden" name="srchtype" value="title" />
+<input type="hidden" name="srhfid" value="" />
+            <input type="text" id="searchkeywords" name="srchtxt" value="输入您要搜索的信息"  onfocus="if (value =='输入您要搜索的信息'){value =''}" onBlur="if (value ==''){value='输入您要搜索的信息'}"/>
+        </dt>
+        <dd>
+          <input name="image" type="image" src="./template/ahdxbl_syw/images/head/search_b1.gif" border="0" />
+        </dd>
+      </dl>
+    </form>
+  </div><!--copy right -->
+<script type=text/javascript><!-- 搜索区JS代码 -->
+function check_form(name)
+{
+var x ;
+var mycars =[1,2,3];
+for ( x in mycars)
+{
+chgClassName('right4_menu_'+mycars[x],'0');  
+} 
+chgClassName('right4_menu_'+name,'on');
+        var testEle = document.getElementById('right4_menu_'+name+'').attributes['value'].value; 
+           document.getElementById("search_select").value=testEle ; 
+}
+ </script>
+
+</div>
+<!--头部LOGO部位结束 -->
+
+<div id="nv">
+                
+                    <a href="javascript:;" id="qmenu" onMouseOver="showMenu({'ctrlid':'qmenu','pos':'34!','duration':2});">我的快捷导航</a>
+                    <!--a id="qmenu" style="font-weight:bold;" href="plugin.php?id=zyyn_donate:donate" onclick="showWindow('zyyn_donate', this.href);return false;">捐助MATHOR</a-->
+<ul><li id="mn_portal" ><a href="portal.php" hidefocus="true" title="Portal"  >门户<span>Portal</span></a></li><li id="mn_N1eae" ><a href="mcm.php" hidefocus="true"  >论坛</a></li><li id="mn_group" ><a href="group.php" hidefocus="true" title="Group"  >群组<span>Group</span></a></li><li id="mn_home" ><a href="home.php" hidefocus="true" title="Space"  >家园<span>Space</span></a></li><li id="mn_N6451" ><a href="http://mgmcm.mathor.com" hidefocus="true" target="_blank"  >MathorCup</a></li><li id="mn_Nd625" ><a href="http://apmcm.mathor.com" hidefocus="true" target="_blank"  >APMCM</a></li><li id="mn_Nd864" ><a href="http://www.worldjingsai.com/vs" hidefocus="true" target="_blank"   style="font-weight: bold;color: orange">竞赛大全</a></li></ul>					
+</div>
+<ul class="p_pop h_pop" id="plugin_menu" style="display: none">  <li><a href="plugin.php?id=dsu_paulsign:sign" id="mn_plink_sign">签到</a></li>
+ </ul>
+<div class="p_pop h_pop" id="mn_userapp_menu" style="display: none"></div><div id="hd_mu" class="head_board">
+    <div class="talk">
+    <div class="talk_l board_l"><span></span>咨询</div>
+    <div class="life_r"> <a href="/forum-2-1.html" title="动态新闻">动态新闻</a> <a href="/forum-63-1.html" title="课件教程">课件教程</a> <a href="/forum-64-1.html" title="数学算法">算法</a> <a href="/forum-65-1.html" title="文献年鉴">文献年鉴</a> <a href="forum-47-1.html" title="社区公告">社区公告</a> <a href="/forum-66-1.html" title="书籍大全">书籍</a></div>
+  </div>				 
+  <div class="life">
+    <div class="life_l board_l"><span></span>竞赛</div>
+    <div class="life_r"> <a href="/forum-50-1.html" title="全国大学生数学建模竞赛">国赛</a> <a href="/forum-125-1.html" title="Mathorcup全球大学生数学建模挑战赛">Mathorcup</a> <a href="/forum-52-1.html" title="全国大学生电工数模竞赛">电工杯</a> <a href="/forum-51-1.html" title="美国大学生数学建模竞赛">美赛</a> <a href="/forum-53-1.html" title="全国研究生数学建模竞赛">研究生赛</a> <a href="/forum-55-1.html" title="全国大学生数学竞赛">数学竞赛</a></div>
+  </div>
+  
+  <div class="service">
+    <div class="service_l board_l"><span></span>软件</div>
+    <div class="service_r"> <a href="/forum-67-1.html" title="Matlab">Matlab</a> <a href="/forum-68-1.html" title="Mathematica">Mathematica</a><a href="/forum-70-1.html" title="SPSS/SAS">SPSS/SAS</a> <a href="/forum-72-1.html" title="LINDO/LINGO">LIN(G/D)O</a> <a href="/forum-73-1.html" title="LaTeX">LaTeX</a></div>
+  </div>
+  <div class="women">
+    <div class="women_l board_l"><span></span>区赛</div>
+    <div class="women_r"> <a href="/forum-56-1.html" title="东北数模联赛" target="_blank">东北联赛</a> <a href="/forum-60-1.html" title="苏北数模联赛" target="_blank">苏北联赛</a> <a href="/forum-58-1.html" title="华中数模联赛">华中联赛</a> <a href="/forum-57-1.html" title="华东数模联赛">华东联赛</a> </div>
+  </div>
+</div></div>
+</div>
+<div id="wp" class="wp"><div id="ct" class="wp cl w">
+<div class="nfl">
+<div class="f_c altw">
+<div id="messagetext" class="alert_info">
+<p>您的 军费 -2  ，现在将开始下载“模糊数学MATLAB应用.doc”<script type="text/javascript" reload="1">setTimeout("window.location.href ='forum.php?mod=attachment&aid=Njk4NXxiNGIwNjY4M3wxNDIwMTE5ODE2fDEyNDM4M3wxMDk5MQ%3D%3D&ck=809e4b64';", 3000);</script></p>
+<p class="alert_btnleft"><a href="forum.php?mod=attachment&aid=Njk4NXxiNGIwNjY4M3wxNDIwMTE5ODE2fDEyNDM4M3wxMDk5MQ%3D%3D&ck=809e4b64">如果 3 秒后下载仍未开始，请点击此链接</a></p>
+</div>
+</div>
+</div>
+</div>	</div>
+
+
+<script type="text/javascript">
+_attachEvent(window, 'load', getForbiddenFormula, document);
+function getForbiddenFormula() {
+var toGetForbiddenFormulaFIds = function () {
+ajaxget('plugin.php?id=cloudsearch&formhash=9ca4cbdc');
+};
+var a = document.body.getElementsByTagName('a');
+for(var i = 0;i < a.length;i++){
+if(a[i].getAttribute('sc')) {
+a[i].setAttribute('mid', hash(a[i].href));
+a[i].onmousedown = function() {toGetForbiddenFormulaFIds();};
+}
+}
+var btn = document.body.getElementsByTagName('button');
+for(var i = 0;i < btn.length;i++){
+if(btn[i].getAttribute('sc')) {
+btn[i].setAttribute('mid', hash(btn[i].id));
+btn[i].onmousedown = function() {toGetForbiddenFormulaFIds();};
+}
+}
+}
+</script>
+
+<div id="ft" class="wp cl">
+
+    <div class="footer">
+
+<div class="f_bor">
+     <ul>
+    <li>			
+<div class="f_lin"><a href="/thread-5363-1-1.html" target="_blank" style="color:#FB8F03">发帖教程</a>
+                <span><a target="_blank" href="/forum-142-1.html">日常交流</a></span>
+                <span><a target="_blank" href="/book.html">分享书籍</a></span></div>
+   </li>
+<li>			 
+<div class="f_lin">
+<span><a target="_blank" href="/thread-1804-1-1.html">免责声明</a></span>
+<span><a target="_blank" href="/forum-63-1.html">校苑培训</a></span>
+                <span><a target="_blank" href="/forum-147-1.html">建模感悟</a></span></div>
+   </li>
+<li>			 
+<div class="f_lin">
+                <span><a target="_blank" href="/article-41-1.html">关于我们</a></span>
+                <span ><a target="_blank" style="color: #FB8F03" href="/thread-1544-1-1.html"> 加入我们</a></span>
+<span style="color: #FB8F03"><a target="_blank" href="/plugin.php?id=drc_qqgroup:main">联系我们</a></span></div>
+   </li>
+<li>
+<div class="f_lin">
+                </div>
+   </li>
+ </ul>
+ </div><!--第一行结束 -->
+ 
+ <div class="blank10"></div>
+ 
+ <div id="frt">		 
+    <div class="footxx">		
+            <p><a href="/forum-49-1.html">告诉校苑数模社区你还喜欢什么?</a>   网站运营：<a href="http://www.phpplay.com/" target="_blank">校苑网络</a></p>
+        <p>&copy; 2012 <a href="http://www.mathor.com" target="_blank">校苑数模社区</a> 版权所有。法律顾问：田亮&nbsp;&nbsp; <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备14013810号-1</a>
+&nbsp;<a href="http://discuz.qq.com/service/security" target="_blank" title="防水墙保卫网站远离侵害"><img src="static/image/common/security.png"></a> <script></script>
+</p>
+    </div>
+    <div class="footwj">
+        <a href="http://www.bj.cyberpolice.cn/" target="_blank"><img src="/static/image/common/police.gif"></a>
+    </div>
+<div class="blank1"></div>
+        <p>本站信息由会员发布，本站不承担由内容合法性和真实性引起的一切争议和法律责任。 <a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=2514315451&amp;f=1&amp;ty=1&amp;aty=2&amp;a=&amp;curl=http%3A%2F%2Fwww.mathor.com%2Fabout%2Flinks.html" target="_blank">咨询QQ：2514315451</a></p>	
+</div><!-- 第二行结束 -->
+
+</div></div>
+
+<div id="g_upmine_menu" class="tip tip_3" style="display:none;">
+<div class="tip_c">
+积分 296, 距离下一级还需  积分
+</div>
+<div class="tip_horn"></div>
+</div>
+<script src="home.php?mod=spacecp&ac=pm&op=checknewpm&rand=1420119816" type="text/javascript"></script>
+<script src="home.php?mod=misc&ac=sendmail&rand=1420119816" type="text/javascript"></script>
+<span id="scrolltop" onclick="window.scrollTo('0','0')">返回顶部</span>
+<script type="text/javascript">_attachEvent(window, 'scroll', function(){showTopLink();});</script>
+			<div id="discuz_tips" style="display:none;"></div>
+			<script type="text/javascript">
+				var tipsinfo = '5043756|X3.2|0.6||0||124383|12|1420119816|c5404d3c2cb63ed311f5621477d34914|2';
+			</script>
+			<script src="http://discuz.gtimg.cn/cloud/scripts/discuz_tips.js?v=1" type="text/javascript" charset="UTF-8"></script></body>
+</html>
