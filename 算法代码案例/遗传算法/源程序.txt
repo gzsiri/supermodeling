@@ -1,0 +1,208 @@
+TSP问题的遗传算法+转载
+
+我这几天做了一个队员选择问题，其中一个问题我是用遗传算法做的，现在我把它整理成解决tsp问题的遗传算法：旅行商问题(traveling saleman problem,简称tsp)：
+    已知n个城市之间的相互距离，现有一个推销员必须遍访这n个城市，并且每个城市只能访问一次，最后又必须返回出发城市。如何安排他对这些城市的访问次序，可使其旅行路线的总长度最短？
+    用图论的术语来说，假设有一个图g=(v,e)，其中v是顶点集，e是边集，设d=(dij)是由顶点i和顶点j之间的距离所组成的距离矩阵，旅行商问题就是求出一条通过所有顶点且每个顶点只通过一次的具有最短距离的回路。
+    这个问题可分为对称旅行商问题(dij=dji,,任意i,j=1,2,3，…,n)和非对称旅行商问题(dij≠dji,,任意i,j=1,2,3，…,n)。
+    若对于城市v={v1,v2,v3,…,vn}的一个访问顺序为t=(t1,t2,t3,…,ti,…,tn),其中ti∈v(i=1,2,3,…,n)，且记tn+1= t1，则旅行商问题的数学模型为：
+     min     l=σd(t(i),t(i+1))  （i=1,…,n）
+    旅行商问题是一个典型的组合优化问题，并且是一个np难问题，其可能的路径数目与城市数目n是成指数型增长的，所以一般很难精确地求出其最优解，本文采用遗传算法求其近似解。
+    遗传算法：
+初始化过程：用v1,v2,v3,…,vn代表所选n个城市。定义整数pop-size作为染色体的个数，并且随机产生pop-size个初始染色体，每个染色体为1到18的整数组成的随机序列。
+适应度f的计算：对种群中的每个染色体vi，计算其适应度，f=σd(t(i),t(i+1)).
+评价函数eval(vi)：用来对种群中的每个染色体vi设定一个概率，以使该染色体被选中的可能性与其种群中其它染色体的适应性成比例，既通过轮盘赌，适应性强的染色体被选择产生后台的机会要大，设alpha∈(0,1)，本文定义基于序的评价函数为eval(vi)=alpha*(1-alpha).^(i-1) 。[随机规划与模糊规划]
+选择过程：选择过程是以旋转赌轮pop-size次为基础，每次旋转都为新的种群选择一个染色体。赌轮是按每个染色体的适应度进行选择染色体的。
+   step1 、对每个染色体vi,计算累计概率qi，q0=0;qi=σeval(vj)   j=1,…,i;i=1,…pop-size.
+   step2、从区间(0,pop-size)中产生一个随机数r；
+   step3、若qi-1<r<qi,则选择第i个染色体 ；
+   step4、重复step2和step3共pop-size次，这样可以得到pop-size个复制的染色体。
+grefenstette编码：由于常规的交叉运算和变异运算会使种群中产生一些无实际意义的染色体，本文采用grefenstette编码《遗传算法原理及应用》可以避免这种情况的出现。所谓的grefenstette编码就是用所选队员在未选（不含淘汰）队员中的位置，如：
+          8 15 2 16 10 7 4 3 11 14 6 12 9 5 18 13 17 1
+          对应：
+          8 14 2 13 8 6 3 2 5 7 3 4 3 2 4 2 2 1。
+交叉过程：本文采用常规单点交叉。为确定交叉操作的父代，从 到pop-size重复以下过程：从[0，1]中产生一个随机数r，如果r<pc ，则选择vi作为一个父代。
+           将所选的父代两两组队，随机产生一个位置进行交叉，如：
+          8 14 2 13 8 6 3 2 5 7 3 4 3 2 4 2 2 1
+          6 12 3 5 6 8 5 6 3 1 8 5 6 3 3 2 1 1
+交叉后为：
+         8 14 2 13 8 6 3 2 5 1 8 5 6 3 3 2 1 1
+         6 12 3 5 6 8 5 6 3 7 3 4 3 2 4 2 2 1
+变异过程：本文采用均匀多点变异。类似交叉操作中选择父代的过程，在r<pm 的标准下选择多个染色体vi作为父代。对每一个选择的父代，随机选择多个位置，使其在每位置按均匀变异（该变异点xk的取值范围为[ukmin,ukmax],产生一个[0，1]中随机数r，该点变异为x'k=ukmin+r(ukmax-ukmin)）操作。如：
+         8 14 2 13 8 6 3 2 5 7 3 4 3 2 4 2 2 1
+      变异后：
+        8 14 2 13 10 6 3 2 2 7 3 4 5 2 4 1 2 1
+反grefenstette编码：交叉和变异都是在grefenstette编码之后进行的，为了循环操作和返回最终结果，必须逆grefenstette编码过程，将编码恢复到自然编码。
+循环操作：判断是否满足设定的带数xzome，否，则跳入适应度f的计算；是，结束遗传操作，跳出。
+
+
+function [bestpop,trace]=ga(d,termops,num,pc,cxops,pm,alpha)
+%
+%————————————————————————
+%[bestpop,trace]=ga(d,termops,num,pc,cxops,pm,alpha)
+%d:距离矩阵
+%termops:种群带数
+%num:每带染色体的个数
+%pc:交叉概率
+%cxops:由于本程序采用单点交叉，交叉点的设置在本程序中没有很好的解决，所以本文了采用定点，即第cxops，可以随机产生。
+%pm:变异概率
+%alpha:评价函数eval(vi)=alpha*(1-alpha).^(i-1).
+%bestpop:返回的最优种群
+%trace:进化轨迹
+%------------------------------------------------
+%####@@@##版权所有！欢迎广大网友改正，改进！##@@@####
+%e-mail:tobysidney33@sohu.com
+%####################################################
+%
+citynum=size(d,2);
+n=nargin;
+if n<2
+    disp('缺少变量！！')
+    disp('^_^开个玩笑^_^')
+end
+if n<2
+    termops=500;
+    num=50;
+    pc=0.25;
+    cxops=3;
+    pm=0.30;
+    alpha=0.10;
+end
+if n<3
+    num=50;
+    pc=0.25;
+    cxops=3;
+    pm=0.30;
+    alpha=0.10;
+end
+if n<4
+    pc=0.25;
+    cxops=3;
+    pm=0.30;
+    alpha=0.10;
+end
+if n<5
+    cxops=3;
+    pm=0.30;
+    alpha=0.10;
+end
+if n<6
+    pm=0.30;
+    alpha=0.10;
+end
+if n<7
+    alpha=0.10;
+end
+if isempty(cxops)
+    cxops=3;
+end
+
+[t]=initializega(num,citynum);
+for i=1:termops
+[l]=f(d,t);
+[x,y]=find(l==max(l));
+trace(i)=-l(y(1));
+bestpop=t(y(1),:);
+[t]=select(t,l,alpha);
+[g]=grefenstette(t);
+[g1]=crossover(g,pc,cxops);
+[g]=mutation(g1,pm);  %均匀变异
+[t]=congrefenstette(g);
+end
+
+---------------------------------------------------------
+function [t]=initializega(num,citynum)
+for i=1:num
+    t(i,:)=randperm(citynum);
+end
+-----------------------------------------------------------
+function [l]=f(d,t)
+[m,n]=size(t);
+for k=1:m
+    for i=1:n-1
+      l(k,i)=d(t(k,i),t(k,i+1));
+    end
+      l(k,n)=d(t(k,n),t(k,1));
+      l(k)=-sum(l(k,:));
+end
+-----------------------------------------------------------
+function [t]=select(t,l,alpha)
+[m,n]=size(l);
+t1=t;
+[beforesort,aftersort1]=sort(l,2);%fsort from l to u
+for i=1:n
+    aftersort(i)=aftersort1(n+1-i);      %change 
+end
+for k=1:n;
+    t(k,:)=t1(aftersort(k),:);
+    l1(k)=l(aftersort(k));
+end
+t1=t;
+l=l1;
+for i=1:size(aftersort,2)
+    evalv(i)=alpha*(1-alpha).^(i-1);
+end
+m=size(t,1);
+q=cumsum(evalv);
+qmax=max(q);
+for k=1:m
+    r=qmax*rand(1);
+    for j=1:m
+        if j==1&r<=q(1)
+            t(k,:)=t1(1,:);
+        elseif j~=1&r>q(j-1)&r<=q(j)
+            t(k,:)=t1(j,:);
+        end
+    end
+end
+--------------------------------------------------
+function [g]=grefenstette(t)
+[m,n]=size(t);
+for k=1:m
+    t0=1:n;
+   for i=1:n
+       for j=1:length(t0)
+           if t(k,i)==t0(j)
+              g(k,i)=j;
+              t0(j)=[];
+              break
+           end
+       end
+    end
+end
+-------------------------------------------
+function [g]=crossover(g,pc,cxops)
+[m,n]=size(g);
+ran=rand(1,m);
+r=cxops;
+[x,ru]=find(ran<pc);
+if ru>=2
+    for k=1:2:length(ru)-1
+       g1(ru(k),:)=[g(ru(k),[1:r]),g(ru(k+1),[(r+1):n])];
+       g(ru(k+1),:)=[g(ru(k+1),[1:r]),g(ru(k),[(r+1):n])];
+       g(ru(k),:)=g1(ru(k),:);
+    end
+end
+--------------------------------------------
+function [g]=mutation(g,pm)    %均匀变异
+[m,n]=size(g);
+ran=rand(1,m);
+r=rand(1,3);      %dai gai jin
+rr=floor(n*rand(1,3)+1);
+[x,mu]=find(ran<pm);
+for k=1:length(mu)
+    for i=1:length(r)
+        umax(i)=n+1-rr(i);
+        umin(i)=1;
+        g(mu(k),rr(i))=umin(i)+floor((umax(i)-umin(i))*r(i));
+    end
+end
+---------------------------------------------------
+function [t]=congrefenstette(g)
+[m,n]=size(g);
+for k=1:m
+    t0=1:n;
+   for i=1:n
+      t(k,i)=t0(g(k,i));
+      t0(g(k,i))=[];
+   end
+end
