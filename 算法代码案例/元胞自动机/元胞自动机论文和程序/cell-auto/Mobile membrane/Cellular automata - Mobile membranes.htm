@@ -1,0 +1,345 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0052)http://www.cell-auto.com/mobile_membranes/index.html -->
+<HTML><HEAD><TITLE>Cellular automata - Mobile membranes</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content="Cellular automata - Mobile membranes" name=description>
+<META 
+content="Java Physics Water Algorithm Simulation Tim Tyler Algortithms Algorithmic Texture Textures Engine Generate Garden Gene Genetic Grow Synthesis Web Backdrop Background Standard Design Page Background Animate Animation Marbling Fractal Low Plant Evolve Surface Ray Cast Image Shade Gouraud Animated Phong Lighting High Anti Aliasing Bandwidth Specification" 
+name=keywords>
+<STYLE>BODY {
+	MARGIN: 0px
+}
+</STYLE>
+
+<META content="MSHTML 6.00.2900.3243" name=GENERATOR></HEAD>
+<BODY text=#000000 vLink=#008000 aLink=#ff2020 link=#2020ff bgColor=#e8e8e8 
+background="Cellular automata - Mobile membranes.files/bg.jpg">
+<CENTER>
+<TABLE cellPadding=1 width="100%" bgColor=#d0d0d0 border=2>
+  <TBODY>
+  <TR>
+    <TD align=middle width="100%"><FONT size=+1><STRONG>Mobile 
+      membranes</STRONG></FONT> </TD></TR></TBODY></TABLE></CENTER>
+<CENTER><APPLET height="94%" alt="Java applet failure" archive=plugin/r2d[2].jar 
+width="100%" code=R2D.class name=Membranes>
+<h4>Unfortunately, your browser does not support Java.<BR>A Java applet is the 
+central focus of this page.<BR>You're encouraged to try again using a Java-aware 
+browser.</h4></APPLET></CENTER>
+<P>
+<CENTER><FONT size=-2>Click <A 
+href="http://www.cell-auto.com/mobile_membranes/plugin/index.html">here</A> for 
+a version using the Sun Java plugin.</FONT>
+<P>
+<TABLE width="90%">
+  <TBODY>
+  <TR>
+    <TD>
+      <H2>Mobile membrane model</H2>This applet displays a cellular automaton 
+      model of mobile membranes.
+      <P>The model is exactly reversible - and can be run backwards by ticking 
+      the checkbox supplied.
+      <P>It uses a complex neighbourhood - which has no name. The neighbourhood 
+      is based on the idea described <A 
+      href="http://www.cell-auto.com/bijective/index.html">here</A>."
+      <P>
+      <H2>Rules</H2>The automaton can be thought of as consisting of three 
+      layers:
+      <P>
+      <UL>
+        <LI>Simple gas - used solely as a source of biased pseudo-random numbers 
+        (and not displayed); 
+        <LI>Diffusing gas - used to greate pressure between the membranes; 
+        <LI>Links - used to construct the membranes themselves. </LI></UL>Aside 
+      from the two gasses in the model, each cell has 16 states - which are used 
+      to store the state of the atoms and links.
+      <P>These arerepresented as:
+      <P>
+      <CENTER><IMG src="Cellular automata - Mobile membranes.files/x_0.png"> 
+      <IMG src="Cellular automata - Mobile membranes.files/x_1.png"> <IMG 
+      src="Cellular automata - Mobile membranes.files/x_2.png"> <IMG 
+      src="Cellular automata - Mobile membranes.files/x_3.png"> <IMG 
+      src="Cellular automata - Mobile membranes.files/x_4.png"> <IMG 
+      src="Cellular automata - Mobile membranes.files/x_5.png"> <IMG 
+      src="Cellular automata - Mobile membranes.files/x_6.png"> <IMG 
+      src="Cellular automata - Mobile membranes.files/x_7.png"><BR><IMG 
+      src="Cellular automata - Mobile membranes.files/x_8.png"> <IMG 
+      src="Cellular automata - Mobile membranes.files/x_9.png"> <IMG 
+      src="Cellular automata - Mobile membranes.files/x_a.png"> <IMG 
+      src="Cellular automata - Mobile membranes.files/x_b.png"> <IMG 
+      src="Cellular automata - Mobile membranes.files/x_c.png"> <IMG 
+      src="Cellular automata - Mobile membranes.files/x_d.png"> <IMG 
+      src="Cellular automata - Mobile membranes.files/x_e.png"> <IMG 
+      src="Cellular automata - Mobile membranes.files/x_f.png"> </CENTER>
+      <P>A membrane is represented by a chain of links - e.g.:
+      <P>
+      <CENTER><IMG src="Cellular automata - Mobile membranes.files/x_6.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_2.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_2.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_4.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_2.png"><BR><IMG 
+      src="Cellular automata - Mobile membranes.files/x_2.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_4.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_8.png"><BR><IMG 
+      src="Cellular automata - Mobile membranes.files/x_2.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_1.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_0.png"><BR><IMG 
+      src="Cellular automata - Mobile membranes.files/x_1.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_9.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_2.png"><BR><IMG 
+      src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_4.png"><IMG 
+      src="Cellular automata - Mobile membranes.files/x_0.png"><BR></CENTER>
+      <P>Think of the red links extending to the centre of the adjacent cell for 
+      this diagram to make sense.
+      <P>
+      <P>Cellular evolution progresses according to a few simple rules:
+      <P>
+      <UL>
+        <LI>If a bit in the gas PRNG layer is set then the membrane remains 
+        locally unchanged...
+        <P></P>
+        <LI>...otherwise a transformation is applied:
+        <P>Information is read from the marked region:
+        <P>
+        <CENTER><IMG 
+        src="Cellular automata - Mobile membranes.files/x_1.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_3.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_a.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_8.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_4.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><BR></CENTER>
+        <P>...is transformed, and then written back to the region:
+        <P>
+        <CENTER><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_3.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_a.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_3.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_a.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><BR></CENTER>
+        <P>Areas that are not marked as being "written back to" are left 
+        unchanged.
+        <P>Note that there are two "main" cells involved (in the top diagram) - 
+        and <EM>all</EM> the links link to one or other of them.
+        <P>The rule is essentially a fairly simple one. However I'll describe it 
+        rather than attemping to exactly specify it.
+        <P>If a cell is considered to be "active" if any links point at its 
+        centre, and "empty" otherwise. If either of the two "main" cells is 
+        active - and the other is empty - it moves over, updating any links as 
+        it does so (so they remain linked to the same points).
+        <P>The criterion used to determine whether a cell can move in one 
+        direction is to check whether there are any links attached to it which 
+        have a component in the opposite direction. If not - that cell can move 
+        (any such links would be stretched beyond breaking point if the cell 
+        moved away from them otherwise.
+        <P>This transformation is applied to the grid using the following 
+        pattern:
+        <P>
+        <CENTER><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_3.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_e.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_3.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_e.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_3.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_e.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_3.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_e.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_3.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_e.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_3.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_e.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_3.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_e.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_3.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_e.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_3.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_e.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_3.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_e.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_3.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_e.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_3.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_e.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_3.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_e.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_3.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_e.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_3.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_e.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_3.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_e.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><BR><BR></CENTER>The 
+        diagram shows the domain above repeated in a chequer-board pattern - 
+        repeated 16 times. Domains overlap with one another at their corners, 
+        and - since I'm not using enough colours - the pattern can be a bit 
+        difficult to work out.
+        <P>The rule is applied in sequence, using one of four spatial offsets: 
+        (0,0), (0,1), (1,0) and (1,1).
+        <P>This is the "horizontal" rule. There's also a "vertical" rule:
+        <P>Information is read from the marked region:
+        <P>
+        <CENTER><IMG 
+        src="Cellular automata - Mobile membranes.files/x_1.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_2.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_8.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_5.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_8.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_4.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><BR></CENTER>
+        <P>...is transformed, and then written back to the region:
+        <P>
+        <CENTER><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_5.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_d.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_8.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_4.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_4.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_0.png"><BR></CENTER>
+        <P>Areas that are not marked as being "written back to" are left 
+        unchanged.
+        <P>The transformation above is applied to the grid using the following 
+        pattern:
+        <P>
+        <CENTER><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_d.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_d.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_d.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_d.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_6.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_6.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_6.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_6.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_d.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_d.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_d.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_d.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_6.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_6.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_6.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_6.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_d.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_d.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_d.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_d.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_6.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_6.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_6.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_6.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_d.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_d.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_d.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_d.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><BR><IMG 
+        src="Cellular automata - Mobile membranes.files/x_6.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_6.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_6.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_6.png"><IMG 
+        src="Cellular automata - Mobile membranes.files/x_f.png"><BR></CENTER>
+        <P>Note that - in the applet - a cell is displayed as containing 
+        membrane if there are any links in that cell. Unfortunately, this 
+        produces some visible gaps - as a look at the diagram of the "example" 
+        membrane near the top of this document illustrates.
+        <P>A better-quality display routine would mark cells if they had any 
+        links going into them.
+        <P></P></LI></UL></TD></TR></TBODY></TABLE></CENTER>
+<P>
+<HR align=center width="25%">
+
+<P>
+<ADDRESS>
+<CENTER><EM><A href="http://timtyler.org/">Tim Tyler</A></EM> | <EM><A 
+href="mailto:tt@iname.com">tt@iname.com</A></EM> | <EM><A 
+href="http://cell-auto.com/">http://cell-auto.com/</A></EM> 
+</CENTER></ADDRESS></BODY></HTML>

@@ -1,0 +1,18 @@
+﻿<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+<a href="http://www.chinadmd.com" target="_blank"><img alt="中华文本库" src="http://www.chinadmd.com/img/logo.jpg"></a>
+<br />
+<a href="http://www.chinadmd.com" target="_blank" title="中华文本库">中华文本库</a> 地址：<a href="http://www.chinadmd.com/file/3tptxeirirscrxps36wrcr3u_2.html" target="_blank">http://www.chinadmd.com/file/3tptxeirirscrxps36wrcr3u_2.html</a>
+<br /><br />
+<h1>实验一细胞自动机</h1>
+<p>oundColor); } int main() { int data[SIZE][SIZE]={0};//0->virus 1->cell 2->boundary int i,j,instruct; srand(time(NULL));//use the current time to seed the random number generator for(i=0;i<=SIZE-1;i++) { for(j=0;j<=SIZE-1;j++) { if(i*j==0||i==SIZE-1||j==SIZE-1) { data[i][j]=22; }//end if else data[i][j]=11*(rand()%2); }//end for</p>
+<p>}//end for system("mode con cols=100 window</p>
+<p>& color 0f");//to set the size and the color of the</p>
+<p>//input a random number except 0 to continue the game while(scanf("%d"<tofu002>&instruct)!=0) { system("cls");//clear the screen for(i=0;i<=SIZE-1;i++) { for(j=0;j<=SIZE-1;j++) { if(data[i][j]%10==1) { SetColor(10);//function call printf("%c "<tofu002>6);//display the character } else if(data[i][j]%10==0) { SetColor(6);//function call printf("%c "<tofu002>4);//display the character } Else { SetColor(3);//function call printf("%c "<tofu002>3);//display the character } if(i*j==0||i==SIZE-1||j==SIZE-1) { } else data[i][j]=(data[i][j]%10)*10;} printf("\u005cn");} rule(data);//function call printf("请输入 1 继续 0 结束\u005cn"); }//end while return 0; }</p>
+<p>六、结论分析 初始状态下：</p>
+<p>最终结果:</p>
+<p>（其中蓝色代表活着） 七、主要参考文献与网页 参考的网页有： 1.百度百科_细胞自动机</p>
+<p>2.John Conway's Game of Life 3.Conway's Game of Life simulator for Microsoft Windows 4.Game of Life Applet</p>
+<p></p>
+<br />
+<a href="http://www.chinadmd.com" target="_blank" title="中华文本库">中华文本库</a>
+</html>

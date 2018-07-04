@@ -1,0 +1,269 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0052)http://www.cell-auto.com/simple_membranes/index.html -->
+<HTML><HEAD><TITLE>Cellular automata - Membranes</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content="Cellular automata - Membranes" name=description>
+<META 
+content="Java Physics Water Algorithm Simulation Tim Tyler Algortithms Algorithmic Texture Textures Engine Generate Garden Gene Genetic Grow Synthesis Web Backdrop Background Standard Design Page Background Animate Animation Marbling Fractal Low Plant Evolve Surface Ray Cast Image Shade Gouraud Animated Phong Lighting High Anti Aliasing Bandwidth Specification" 
+name=keywords>
+<STYLE>BODY {
+	MARGIN: 0px
+}
+</STYLE>
+
+<META content="MSHTML 6.00.2900.3243" name=GENERATOR></HEAD>
+<BODY text=#000000 vLink=#008000 aLink=#ff2020 link=#2020ff bgColor=#e8e8e8 
+background="Cellular automata - Membranes.files/bg.jpg">
+<CENTER>
+<TABLE cellPadding=1 width="100%" bgColor=#d0d0d0 border=2>
+  <TBODY>
+  <TR>
+    <TD align=middle width="100%"><FONT 
+      size=+1><STRONG>Membranes</STRONG></FONT> </TD></TR></TBODY></TABLE></CENTER>
+<CENTER><APPLET height="94%" alt="Java applet failure" archive=plugin/r2d[1].jar 
+width="100%" code=R2D.class name=Membranes>
+<h4>Unfortunately, your browser does not support Java.<BR>A Java applet is the 
+central focus of this page.<BR>You're encouraged to try again using a Java-aware 
+browser.</h4></APPLET></CENTER>
+<P>
+<CENTER><FONT size=-2>Click <A 
+href="http://www.cell-auto.com/simple_membranes/plugin/index.html">here</A> for 
+a version using the Sun Java plugin.</FONT>
+<P>
+<TABLE width="90%">
+  <TBODY>
+  <TR>
+    <TD>
+      <H2>Membrane model</H2>This applet displays a cellular automaton model of 
+      membranes.
+      <P>The model is exactly reversible - and can be run backwards by ticking 
+      the checkbox supplied.
+      <P>It uses an isometric neighbourhood - known as the <A 
+      href="http://www.cell-auto.com/neighbourhood/square4/index.html">Square-4 
+      partitioning neighbourhood</A> - in order to produce a reversible system.
+      <P>
+      <H2>Partition rules</H2>The automaton can be thought of as consisting of 
+      three layers:
+      <P>
+      <UL>
+        <LI>Simple gas - used solely as a source of biased pseudo-random numbers 
+        (and not displayed); 
+        <LI>Diffusing gas - used to greate pressure between the membranes; 
+        <LI>Atoms and links - used to construct the membranes themselves; 
+      </LI></UL>Each partition is divided into four cells.
+      <P>In each cell there is one bit for each of the two gases - and seven 
+      states which are used to store the state of the atoms and links.
+      <P>These are:
+      <P>
+      <CENTER><IMG src="Cellular automata - Membranes.files/cell0.png"> <IMG 
+      src="Cellular automata - Membranes.files/cell1.png"> <IMG 
+      src="Cellular automata - Membranes.files/cell4.png"> <IMG 
+      src="Cellular automata - Membranes.files/cell6.png"> <IMG 
+      src="Cellular automata - Membranes.files/cell5.png"> <IMG 
+      src="Cellular automata - Membranes.files/cell2.png"> <IMG 
+      src="Cellular automata - Membranes.files/cell3.png"> </CENTER>
+      <P>A membrane is represented by a continuous chain of atoms and links - 
+      e.g.:
+      <P>
+      <CENTER>
+      <TABLE cols=3 rows="3">
+        <TBODY>
+        <TR>
+          <TD><IMG src="Cellular automata - Membranes.files/cell0.png"><IMG 
+            src="Cellular automata - Membranes.files/cell0.png"><BR><IMG 
+            src="Cellular automata - Membranes.files/cell0.png"><IMG 
+            src="Cellular automata - Membranes.files/cell1.png"></TD>
+          <TD><IMG src="Cellular automata - Membranes.files/cell1.png"><IMG 
+            src="Cellular automata - Membranes.files/cell2.png"><BR><IMG 
+            src="Cellular automata - Membranes.files/cell5.png"><IMG 
+            src="Cellular automata - Membranes.files/cell0.png"></TD>
+          <TD><IMG src="Cellular automata - Membranes.files/cell4.png"><IMG 
+            src="Cellular automata - Membranes.files/cell0.png"><BR><IMG 
+            src="Cellular automata - Membranes.files/cell6.png"><IMG 
+            src="Cellular automata - Membranes.files/cell4.png"></TD></TR>
+        <TR>
+          <TD><IMG src="Cellular automata - Membranes.files/cell1.png"><IMG 
+            src="Cellular automata - Membranes.files/cell5.png"><BR><IMG 
+            src="Cellular automata - Membranes.files/cell3.png"><IMG 
+            src="Cellular automata - Membranes.files/cell0.png"></TD>
+          <TD><IMG src="Cellular automata - Membranes.files/cell0.png"><IMG 
+            src="Cellular automata - Membranes.files/cell0.png"><BR><IMG 
+            src="Cellular automata - Membranes.files/cell0.png"><IMG 
+            src="Cellular automata - Membranes.files/cell0.png"></TD>
+          <TD><IMG src="Cellular automata - Membranes.files/cell1.png"><IMG 
+            src="Cellular automata - Membranes.files/cell5.png"><BR><IMG 
+            src="Cellular automata - Membranes.files/cell3.png"><IMG 
+            src="Cellular automata - Membranes.files/cell0.png"></TD></TR>
+        <TR>
+          <TD><IMG src="Cellular automata - Membranes.files/cell6.png"><IMG 
+            src="Cellular automata - Membranes.files/cell4.png"><BR><IMG 
+            src="Cellular automata - Membranes.files/cell0.png"><IMG 
+            src="Cellular automata - Membranes.files/cell6.png"></TD>
+          <TD><IMG src="Cellular automata - Membranes.files/cell1.png"><IMG 
+            src="Cellular automata - Membranes.files/cell2.png"><BR><IMG 
+            src="Cellular automata - Membranes.files/cell5.png"><IMG 
+            src="Cellular automata - Membranes.files/cell0.png"></TD>
+          <TD><IMG src="Cellular automata - Membranes.files/cell5.png"><IMG 
+            src="Cellular automata - Membranes.files/cell0.png"><BR><IMG 
+            src="Cellular automata - Membranes.files/cell0.png"><IMG 
+            src="Cellular automata - Membranes.files/cell0.png"></TD></TR></TBODY></TABLE></CENTER>
+      <P>Cellular evolution progresses according to a few simple rules:
+      <P>
+      <UL>
+        <LI>If a bit in the gas PRNG layer is set the contents of the partition 
+        remain unchanged...
+        <P></P>
+        <LI>...otherwise the following transformations are applied:
+        <P>
+        <CENTER>
+        <TABLE cols=3>
+          <TBODY>
+          <TR>
+            <TD><IMG src="Cellular automata - Membranes.files/cell1.png"><IMG 
+              src="Cellular automata - Membranes.files/cell2.png"><BR><IMG 
+              src="Cellular automata - Membranes.files/cell3.png"><IMG 
+              src="Cellular automata - Membranes.files/cell0.png"></TD>
+            <TD>-&gt; </TD>
+            <TD><IMG src="Cellular automata - Membranes.files/cell0.png"><IMG 
+              src="Cellular automata - Membranes.files/cell1.png"><BR><IMG 
+              src="Cellular automata - Membranes.files/cell1.png"><IMG 
+              src="Cellular automata - Membranes.files/cell5.png"></TD></TR></TBODY></TABLE>
+        <P>
+        <TABLE cols=3>
+          <TBODY>
+          <TR>
+            <TD><IMG src="Cellular automata - Membranes.files/cell1.png"><IMG 
+              src="Cellular automata - Membranes.files/cell2.png"><BR><IMG 
+              src="Cellular automata - Membranes.files/cell5.png"><IMG 
+              src="Cellular automata - Membranes.files/cell0.png"></TD>
+            <TD>-&gt; </TD>
+            <TD><IMG src="Cellular automata - Membranes.files/cell0.png"><IMG 
+              src="Cellular automata - Membranes.files/cell1.png"><BR><IMG 
+              src="Cellular automata - Membranes.files/cell2.png"><IMG 
+              src="Cellular automata - Membranes.files/cell5.png"></TD></TR></TBODY></TABLE>
+        <P>
+        <TABLE cols=3>
+          <TBODY>
+          <TR>
+            <TD><IMG src="Cellular automata - Membranes.files/cell1.png"><IMG 
+              src="Cellular automata - Membranes.files/cell5.png"><BR><IMG 
+              src="Cellular automata - Membranes.files/cell5.png"><IMG 
+              src="Cellular automata - Membranes.files/cell0.png"></TD>
+            <TD>-&gt; </TD>
+            <TD><IMG src="Cellular automata - Membranes.files/cell0.png"><IMG 
+              src="Cellular automata - Membranes.files/cell3.png"><BR><IMG 
+              src="Cellular automata - Membranes.files/cell2.png"><IMG 
+              src="Cellular automata - Membranes.files/cell5.png"></TD></TR></TBODY></TABLE></CENTER>
+        <P>... in all rotated and reflected variations.
+        <P>If the state of the partition is not in the list above, it remains 
+        unchanged.
+        <P></P></LI></UL>These rules are sufficient to produce most of the 
+      dynamics visible above.
+      <P>The second gas interacts with the membranes very simply it freezes 
+      membrane motion is frozen in any partitions containing gas particles. This 
+      produces the effect that the membrane tends to move away from the gas - 
+      due to interactions at the membrane "corners".
+      <P>The rules (in the diagram) all have the property that entry and exit 
+      points from the partition are preserved - and the count of atoms and links 
+      present is also preserved.
+      <P>
+      <H2>Future directions</H2>There are a number of possibilities for 
+      extending the model:
+      <P>
+      <UL>
+        <LI>First note that making the membranes divide and rejoin on contact is 
+        a trivial exercise - and can be accomplished by the following additional 
+        rules:
+        <P>
+        <CENTER>
+        <TABLE cols=3>
+          <TBODY>
+          <TR>
+            <TD><IMG src="Cellular automata - Membranes.files/cell2.png"><IMG 
+              src="Cellular automata - Membranes.files/cell2.png"><BR><IMG 
+              src="Cellular automata - Membranes.files/cell2.png"><IMG 
+              src="Cellular automata - Membranes.files/cell2.png"></TD>
+            <TD>-&gt; </TD>
+            <TD><IMG src="Cellular automata - Membranes.files/cell4.png"><IMG 
+              src="Cellular automata - Membranes.files/cell1.png"><BR><IMG 
+              src="Cellular automata - Membranes.files/cell5.png"><IMG 
+              src="Cellular automata - Membranes.files/cell6.png"></TD></TR></TBODY></TABLE>
+        <P>
+        <TABLE cols=3>
+          <TBODY>
+          <TR>
+            <TD><IMG src="Cellular automata - Membranes.files/cell4.png"><IMG 
+              src="Cellular automata - Membranes.files/cell1.png"><BR><IMG 
+              src="Cellular automata - Membranes.files/cell5.png"><IMG 
+              src="Cellular automata - Membranes.files/cell6.png"></TD>
+            <TD>-&gt; </TD>
+            <TD><IMG src="Cellular automata - Membranes.files/cell2.png"><IMG 
+              src="Cellular automata - Membranes.files/cell2.png"><BR><IMG 
+              src="Cellular automata - Membranes.files/cell2.png"><IMG 
+              src="Cellular automata - Membranes.files/cell2.png"></TD></TR></TBODY></TABLE></CENTER>
+        <P></P>
+        <LI>The existing model is quite limited - mainly due to the use of a 
+        rather small neighbourhood. Better dynamics - and less artefacts from 
+        the grid - could be produced with a larger model - perhaps ones based on 
+        the <EM>Square-9 partitioning neighbourhood</EM> or the <EM>Hexagon-7 
+        partitioning neighbourhood</EM>.
+        <P></P>
+        <LI>Minimum radius - it should be possible to produce a membrane with a 
+        controllable minimum radius of curvature using this technique - however 
+        it appears likely that a much larger neighbourhood would be required. 
+        Probably - in practice - if you want a cell to be kept round, the best 
+        approach will be to fill it with a gas.
+        <P></P>
+        <LI>Expanding membranes - the membranes exhibited here are inelastic. It 
+        would be simple to build a model with extensible membranes (if using a 
+        larger neighbourhood) by relaxing the condition that the count of atoms 
+        and links is preserved. 
+        <LI>Elastic membranes - these appear to be a more complex case. It 
+        appears that these will require either variable-length links, or 
+        variable-strength links between the atoms.
+        <P></P>
+        <LI>Semi-permeable membranes - should be simple to implement.
+        <P></P>
+        <LI>Directional semi-permeable membranes - i.e. ones that allow flow in 
+        one direction while restricting flow in the reverse direction - could be 
+        implemented by doubling the number of states that represent linked 
+        atoms. This could result in either a double-sided membrane, or two 
+        membranes, one within the other - both of which could be used to produce 
+        semi-permeable membranes.
+        <P>An alternative approach might employ the curvature of the membrane to 
+        determine the direction of permeablility - however this would need a 
+        larger neighbourhood - and would probably not result in significant 
+        pressure differentials anyway.
+        <P>The simplest approaches to producing directional semi-permeable 
+        membranes seem likely to sacrifice reversibility.
+        <P></P>
+        <LI>Amphipathic membranes - these are the type used in living cells, 
+        where they form double-layers. I've made a previous attempt at modelling 
+        these using my [<A href="http://atoms.org.uk/">ATOMS</A>] technology [<A 
+        href="http://atoms.org.uk/membranes/">here</A>].
+        <P>It would be interesting to attempt to attempt to model these directly 
+        at a low level - using a simulated liquid and simulated molecules that 
+        oriented themselves as a result of collisions with water particles. 
+        While the same sort of cellular automaton "artificial chemistry" 
+        approach used here may be fruitful in doing this it is some distance 
+        away from the system implemented here.
+        <P>Amphipathic membranes may be the simplest way for nature to build 
+        membranes - but I doubt it is the simplest way to build them in 
+        simulation. If the approach described here has an analogue in the real 
+        world, it is probably in the form of the family of 
+        Buckminsterfullerene-like molecules.
+        <P></P></LI></UL>
+      <H2>In closing</H2>It is my hope that techniques for modelling membranes - 
+      related to the ones described here - will eventually prove useful to those 
+      attempting to develop cellular models of cell walls - and their origins - 
+      in biological sytems.
+      <P></P></TD></TR></TBODY></TABLE></CENTER>
+<P>
+<HR align=center width="25%">
+
+<P>
+<ADDRESS>
+<CENTER><EM><A href="http://timtyler.org/">Tim Tyler</A></EM> | <EM><A 
+href="mailto:tim@tt1.org">tim@tt1.org</A></EM> | <EM><A 
+href="http://cell-auto.com/">http://cell-auto.com/</A></EM> 
+</CENTER></ADDRESS></BODY></HTML>

@@ -1,0 +1,16 @@
+﻿<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+<a href="http://www.chinadmd.com" target="_blank"><img alt="中华文本库" src="http://www.chinadmd.com/img/logo.jpg"></a>
+<br />
+<a href="http://www.chinadmd.com" target="_blank" title="中华文本库">中华文本库</a> 地址：<a href="http://www.chinadmd.com/file/3tptxeirirscrxps36wrcr3u_1.html" target="_blank">http://www.chinadmd.com/file/3tptxeirirscrxps36wrcr3u_1.html</a>
+<br /><br />
+<h1>实验一细胞自动机</h1>
+<p>《人工智能》课程 实验报告之一</p>
+<p>自然及科学问题的细胞自动机模拟</p>
+<p>班 级： 学 号： 姓 名： 成绩评定： 评阅老师： 日 期：</p>
+<p>实验报告正文</p>
+<p>一、实验目的 该游戏通过模拟生命， 建立一个二维举行矩阵来模拟细胞的生命状态，在 游戏的中，无序的细胞会逐渐演化出各种精致、有形的结构；有些形状每一代的 细胞结构都在变化。一些形状已经锁定，不会逐代变化。从而清楚的了解细胞自 动机的过程 二、实验内容 游戏要求： 1.建立一个二维矩阵，这个矩阵中的每个方格代表居住着一个活着的或死了 的细胞。 一个细胞在下一个时刻生死取决于相邻八个方格中活着的或死了的细胞 的数量。 2.如果相邻方格活着的细胞数量过多，这个细胞会因为资源匮乏而在下一个 时刻死去； 如果这个数目设定过高，世界中的大部分细胞会因为找不到太多的活 的邻居而死去，直到整个世界都没有生命。 3.如果周围活细胞过少，这个细胞会因太孤单而死去。如果这个数目设定过 低，世界中又会被生命充满而没有什么变化。 （实际中，这个数目一般选取 2 或者 3；这样整个生命世界才不至于太过荒 凉或拥挤，而是一种动态的平衡。这样的话，游戏的规则就是：当一个方格周围 有 2 或 3 个活细胞时， 方格中的活细胞在下一个时刻继续存活；即使这个时刻方 格中没有活细胞，在下一个时刻也会“诞生”活细胞。） 三、实验所用智能算法基本原理与流程 细胞自动机（又称元胞自动机），我们可以把计算机中的宇宙想象成是一堆 方格子构成的封闭空间， 尺寸为 N 的空间就有 N*N 个格子。而每一个格子都可以 看成是一个生命体，每个生命都有生和死两种状态，如果该格子生就显示蓝色， 死则显示白色。 每一个格子旁边都有邻居格子存在，如果我们把 3*3 的 9 个格子 构成的正方形看成一个基本单位的话， 那么这个正方形中心的格子的邻居就是它 旁边的 8 个格子。 每个格子的生死遵循下面的原则： 1． 如果一个细胞周围有 3 个细胞为生（一个细胞周围共有 8 个细胞），则 该细胞为生（即该细胞若原先为死，则转为生，若原先为生，则保持不变） 。 2． 如果一个细胞周围有 2 个细胞为生，则该细胞的生死状态保持不变； 3． 在其它情况下，该细胞为死（即该细胞若原先为生，则转为死，若原先 为死，则保持不变）</p>
+<p>四、系统构成与程序设计 程序设计流程图如下：</p>
+<p>五、核心代码 void rule(int array[SIZE][SIZE]);//function prototype void SetColor(unsigned short ForeColor=5,unsigned short BackGroundColor=2) //change color { HANDLE hCon = GetStdHandle(STD_OUTPUT_HANDLE); SetConsoleTextAttribute(hCon,ForeColor|BackGr</p>
+<br />
+<a href="http://www.chinadmd.com" target="_blank" title="中华文本库">中华文本库</a>
+</html>

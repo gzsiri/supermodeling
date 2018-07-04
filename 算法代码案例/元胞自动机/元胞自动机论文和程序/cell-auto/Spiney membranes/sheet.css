@@ -1,0 +1,9 @@
+BODY {
+ margin: 10 10 10 10;
+ padding: 0 0 0 0;
+}
+
+A:link	  { color: #0000FF; }
+A:visited { color: #000080; }
+A:active  { color: #800000; }
+A:hover	  { color: #008000; }

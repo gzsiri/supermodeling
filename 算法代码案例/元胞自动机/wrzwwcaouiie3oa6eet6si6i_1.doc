@@ -1,0 +1,34 @@
+﻿<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+<a href="http://www.chinadmd.com" target="_blank"><img alt="中华文本库" src="http://www.chinadmd.com/img/logo.jpg"></a>
+<br />
+<a href="http://www.chinadmd.com" target="_blank" title="中华文本库">中华文本库</a> 地址：<a href="http://www.chinadmd.com/file/wrzwwcaouiie3oa6eet6si6i_1.html" target="_blank">http://www.chinadmd.com/file/wrzwwcaouiie3oa6eet6si6i_1.html</a>
+<br /><br />
+<h1>生命游戏-JAVA语言代码-细胞自动机-毕业论文</h1>
+<p>浙</p>
+<p>江</p>
+<p>理</p>
+<p>工</p>
+<p>大</p>
+<p>学</p>
+<p>毕业论文(设计)诚信声明</p>
+<p>我谨在此保证：本人所写的毕业论文(设计)，凡引用他人的研 究成果均已在参考文献或注释中列出。论文(设计)主体均由本人独 立完成，没有抄袭、剽窃他人已经发表或未发表的研究成果行为。 如出现以上违反知识产权的情况，本人愿意承担相应的责任。</p>
+<p>声明人(签名)： 年 月 日</p>
+<p>摘</p>
+<p>要</p>
+<p>本文利用 Java 作为编程语言，Java swing 编写图形界面实现了生命游戏的可 视化编程，并且在生命游戏的基础上进行了一定的扩展，增加了系统复杂性,给定 了简单的初始状态以此进一步研究细胞自动机在复杂系统中所表现的能力，为细 胞自动机及生命游戏的后续研究奠定基础。结论：计算机实现的细胞自动机在计 算机模拟的复杂系统中确实拥有复杂系统所表现出来的自适应性，不确定性等特 性</p>
+<p>关键词：生命游戏；细胞自动机；复杂系统</p>
+<p>ABSTRACT</p>
+<p>Using Java as a programming language, Java Swing as graphical interface to achieve a visual programming of the Game of Life. Expand the basis of the game of life, increased system complexity, given the simple initial state in order to further studythe demonstrated ability of cellular automata in a complex system, lay the foundation for the follow-up study of cellular automata and the Game of Life. Conclusion: The computer-implemented cellular automaton computer simulation of complex systems do have complex systems demonstrated by the self-adaptive, uncertainties and other characteristics</p>
+<p>Keywords： Game of Life; Cellular Automata;Complex System</p>
+<p>目</p>
+<p>摘 要</p>
+<p>录</p>
+<p>Abstract</p>
+<p>第一章 绪论 .............................................................................................................................. 1</p>
+<p>1.1 引言 ....................................................................................................................................... 1 1.2 生命游戏 ............................................................................................................................... 2 1.2.1 什么是生命游戏 ............................................................................................................... 2 1.2.2 生命游戏、细胞自动机的研究意义 ................................................................................. 2</p>
+<p>第二章 细胞自动机、生命游戏与复杂系统 ...................................................................... 3</p>
+<p>2.1 复杂系统 ............................................................................................................................... 3 2.2 细胞自动机............................................................................................................................ 4</p>
+<p>第三章 我的生命游戏的实现 ...........................................................................................</p>
+<br />
+<a href="http://www.chinadmd.com" target="_blank" title="中华文本库">中华文本库</a>
+</html>

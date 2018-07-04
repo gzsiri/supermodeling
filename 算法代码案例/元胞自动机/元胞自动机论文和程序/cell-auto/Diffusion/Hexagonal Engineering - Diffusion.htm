@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0033)http://hex.alife.co.uk/diffusion/ -->
+<HTML><HEAD><TITLE>Hexagonal Engineering - Diffusion</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content="Hexagonal Engineering - Diffusion" name=description>
+<META 
+content="hexagonal engineering alife takeover Diffusion algorithm genetic gene machine java applet" 
+name=keywords>
+<STYLE>BODY {
+	MARGIN: 0px
+}
+</STYLE>
+
+<META content="MSHTML 6.00.2900.3243" name=GENERATOR></HEAD>
+<BODY text=#000000 vLink=#008000 aLink=#ff2020 link=#20209f bgColor=#f0f0f0 
+background="Hexagonal Engineering - Diffusion.files/hexbg1.jpg">
+<CENTER>
+<TABLE cellPadding=1 width="100%" bgColor=#909090 border=2>
+  <TBODY>
+  <TR>
+    <TD align=middle width="100%"><FONT 
+      size=+1><STRONG>Diffusion</STRONG></FONT> </TD></TR></TBODY></TABLE></CENTER>
+<CENTER><APPLET height="96%" alt="Java applet failure" archive=plugin/r2d[1].jar 
+width="100%" code=R2D.class name=Diffusion>
+<h4>Unfortunately, your browser does not support Java.<BR>A Java applet is the 
+central focus of this page.<BR>You're encouraged to try again using a Java-aware 
+browser.</h4></APPLET> 
+<CENTER>
+<TABLE width="80%">
+  <TBODY>
+  <TR>
+    <TD align=left width="100%">
+      <H6 align=center>A version of this applet using Sun's Java plug-in is 
+      available <A 
+      href="http://hex.alife.co.uk/diffusion/plugin/index.html">here</A>.</H6><A 
+      name=intro>
+      <H2 align=center>Introduction</H2>This applet displays a cellular automata 
+      designed to illustrate a variety of types of reversible diffusion.
+      <P>It uses a a number of different <EM>"partitioning neighbourhoods"</EM> 
+      to do this.
+      <P>In particular the <A 
+      href="http://alife.co.uk/ca/triumphant/"><EM>Triumphant 
+      neighbourhood</EM></A>, the <A 
+      href="http://alife.co.uk/ca/qbert/"><EM>Q*Bert neighbourhood</EM></A>, the 
+      <A href="http://alife.co.uk/ca/sod/"><EM>Star of David 
+      neighbourhood</EM></A> and the <A 
+      href="http://alife.co.uk/ca/margolus/"><EM>Margolus neighbourhood</EM></A> 
+      are the partitioning schemes used to help construct the reversible 
+      automata.
+      <P>Various classical Margolus automata are also demonstrated, perhaps most 
+      notable the original Margolus neighbourhood implementation of Fredkin's 
+      Billard Ball Machine (BBM).
+      <P>All the automata here are completely reversible. It is interesting to 
+      allow the automata to evolve for a period, and then click on the "Reverse" 
+      tickbox, to observe that the initial state is indeed recovered.
+      <P>Th applet demonstrates both uniform and non-uniform cellular automata. 
+      The non-uniform automata are called things like "Lichen", "Ultra noise" 
+      and "Non-uniform gas".
+      <P>Reversible automata have applications in simulating gasses and liquids, 
+      and associated physical phenomena.
+      <P>They are important in modelling the physical foundation of computation.
+      <P>Non-uniform reversible automata have applications in cryptography:
+      <P>
+      <UL>
+        <LI>They may be used for generating streams of random numbers, without 
+        allowing any entropy present in the initial seed to leak away as the 
+        automata evolves; 
+        <LI>They are also important for designing symmetric cypher systems. As a 
+        simple example of the technique:
+        <P>The rules of the automata are set with by the key, using certain 
+        types of "maximally non-linear boolean functions". The automata's 
+        initial configuration is set to the plaintext. More than enough 
+        iterations are applied so that influences have time to propagate across 
+        the entire automata. The resulting configuration is the cyphertext. 
+        Decrypting uses the reverse proceedure via the automata's inverse to 
+        recover the plaintext.
+        <P></P></LI></UL></TD></TR></TBODY></TABLE>
+<TABLE width="80%">
+  <TBODY>
+  <TR>
+    <TD align=left width="100%"><A name=interactive>
+      <H2 align=center>Interactive controls</H2>
+      <UL>
+        <LI>Type - controls what rules the automata uses: 
+        <UL>
+          <LI>Margolus 
+          <UL>
+            <LI>Non-uniform gas: gas diffusion using a non-uniform automata 
+            <LI>Bounce gas I: a uniform "gas"; 
+            <LI>Bounce gas II: another uniform "gas"; 
+            <LI>Lichen I: diamond-shaped wave fronts and rapid growth - a 
+            non-uniform automata 
+            <LI>Lichen II: more rapid growth - a non-uniform automata 
+            <LI>Ultra noise: Information diffusion - using a non-uniform 
+            automata 
+            <LI>String thing: String shaped patterns 
+            <LI>String thing II: More string shaped patterns 
+            <LI>Rotations I: Limited diffusion; 
+            <LI>Rotations II: Limited diffusion; 
+            <LI>Rotations III: Slow, random-looking diffusion; 
+            <LI>BBM: implementation of Fredkin's Billard Ball Machine - from 
+            <EM>Cellular Automata Machines</EM>; 
+            <LI>HPP-GAS: Hardy/Pazzis/Pomeau lattice gas - as described in 
+            <EM>Cellular Automata Machines</EM>; 
+            <LI>CRITTERS: "Gliders" - as described in <EM>Cellular Automata 
+            Machines</EM>; 
+            <LI>TRON: A "trip-a-tron" - from the pages of <EM>Cellular Automata 
+            Machines</EM>; 
+            <LI>SWAP-ON-DIAG: A gas with no particle interactions - as described 
+            in <EM>Cellular Automata Machines</EM>; </LI></UL>
+          <LI>Triumphant, Q*Bert and Star of David 
+          <UL>
+            <LI>Non-uniform Gas: a "gas" with particle conservation; 
+            <LI>Lichen I: diamond-shaped wave fronts and rapid growth - a 
+            non-uniform automata 
+            <LI>Lichen II: more rapid growth - a non-uniform automata 
+            <LI>Gaseous: a uniform "gas"; 
+            <LI>Universal computation: the closest thing to the BBM; 
+          </LI></UL></LI></UL>
+        <LI>Use - tool selection - controls which type of tool to use to 
+        manipulate the environment; 
+        <LI>Click to - set the tool's behavior - controls how the tool in use is 
+        applied; 
+        <LI>Display - controls which aspect of the automata is presented; 
+        <LI>Size - controls how many cells are displayed, and their size; 
+        <LI>Show frames - configures how frequently the display is updated; 
+        <LI>Delay - configures how much delay occurs between frame updates; 
+        <LI>Noise level - allows the level of noise present to be controlled; 
+        <LI>Neighbourhood - choose between the <EM>Q*Bert</EM>, <EM>Star of 
+        David</EM> and <EM>Margolus</EM> neighbourhoods; 
+        <LI>Step - allows a paused automata to be single-stepped; 
+        <LI>Reverse - simply toggle this checkbox to reverse the action of the 
+        automaton; 
+        <LI>Pause - allows the automata to be stopped and started; </LI></UL>
+      <H6 align=center>This applet can also be run as an application. Download 
+      <A href="http://hex.alife.co.uk/diffusion/plugin/r2d.jar">this jar 
+      file</A> (using shift-click) and double-click on 
+it.</H6></TD></TR></TBODY></TABLE>
+<HR align=center width="25%">
+
+<CENTER><A href="http://hex.alife.co.uk/index.html">Index</A> | <A 
+href="http://hex.alife.co.uk/links/index.html">Links</A> </CENTER>
+<HR align=center width="25%">
+
+<ADDRESS>
+<CENTER><A href="http://timtyler.org/">Tim Tyler</A> | <A 
+href="http://timtyler.org/contact/">Contact</A> <A 
+href="http://hex.alife.co.uk/">http://hex.alife.co.uk/</A> 
+</CENTER></ADDRESS></CENTER></CENTER></BODY></HTML>
