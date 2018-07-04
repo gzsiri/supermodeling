@@ -1,0 +1,14 @@
+      function yy=model(beta0,X)
+         a=beta0(1);
+         b=beta0(2);
+         c=beta0(3);
+         d=beta0(4);
+         e=beta0(5);
+         f=beta0(6);
+         x1=X(:,1);
+         x2=X(:,2);
+         x3=X(:,3);
+         x4=X(:,4);
+         x5=X(:,5);
+         x6=X(:,6);
+         yy=a*x1+b*x2+c*x3+d*x4+e*x5+f*x6;
